@@ -12,7 +12,7 @@ func main() {
 		final += (englishWords[i[j] - 48]) // append appropriate string from englishWords for each digit
       } else {
         fmt.Println("There is a non-integer in the input array") // error message
-		return
+        return
         }
     }
     final += "," // concatenate strings with a comma
