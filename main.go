@@ -9,13 +9,13 @@ func main() {
   for _, i := range os.Args[1:] { // iterate over inputs
     for j := 0; j < len(i); j++ { // iterate over characters in each input integer
       if i[j] >= 48 && i[j] < 58 { // check if character is an integer
-		final = final + (englishWords[i[j] - 48]) // append appropriate string from englishWords for each digit
+		final += (englishWords[i[j] - 48]) // append appropriate string from englishWords for each digit
       } else {
         fmt.Println("There is a non-integer in the input array") // error message
 		return
         }
     }
-    final = final + "," // concatenate strings with a comma
+    final += "," // concatenate strings with a comma
   }
   fmt.Println(final[:len(final)-1]) // print out the concatenated string minus the final comma
 }
